@@ -6,7 +6,7 @@ const AuthPage = (props) => {
     const { value } = e.target[0];
     console.log(value);
     axios
-      .post("http://localhost:3001/authenticate", { username: value })
+      .post("https://realtime-chat-app-mern-bznz.onrender.com/authenticate", { username: value })
       .then((r) => props.onAuth({ ...r.data, secret: value }))
       .catch((e) => console.log("Auth Error", e));
   };
